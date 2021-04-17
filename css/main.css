@@ -1,0 +1,349 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 12px;
+    background-color: cadetblue;
+}
+
+h1 {
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: Stencil Std, fantasy;
+    text-shadow: 5px 10px grey;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: Stencil Std, fantasy;
+}
+
+img {
+    top: 20%;
+    width: 20px;
+    height: 20px;
+}
+
+button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #4CAF50;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.top {
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.bottom {
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.right {
+    margin: 0;
+    position: absolute;
+    top: 300px;
+    right: 15px;
+}
+
+.bird {
+    position: absolute;
+    width: 34px;
+    height: 24px;
+    background-image: url('../resources/image/bird.png');
+    -webkit-animation: animBird 300ms steps(4) infinite;
+    animation: animBird 300ms steps(4) infinite;
+    top: 45%;
+    left: 49%;
+}
+
+.pipe {
+    position: absolute;
+    left: -100px;
+    width: 52px;
+    height: 100%;
+    z-index: 10;
+    -webkit-animation: animPipe 7500ms linear;
+    animation: animPipe 7500ms linear;
+}
+
+.pipe_upper {
+    position: absolute;
+    top: 0;
+    width: 52px;
+    background-image: url('../resources/image/pipe.png');
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.pipe_upper:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 52px;
+    height: 26px;
+    background-image: url('../resources/image/pipe-down.png');
+}
+
+.pipe_lower {
+    position: absolute;
+    bottom: 0;
+    width: 52px;
+    background-image: url('../resources/image/pipe.png');
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.pipe_lower:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 26px;
+    background-image: url('../resources/image/pipe-up.png');
+}
+
+#iconImage {
+    src: url('../resources/image/unmute.png');
+}
+
+#titleGame {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Stencil Std, fantasy;
+    text-shadow: 5px 10px grey;
+}
+
+#credit {
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#skyGame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-image: url('../resources/image/sky.png');
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+    background-color: #4ec0ca;
+    -webkit-animation: animSky 7s linear infinite;
+    animation: animSky 7s linear infinite;
+}
+
+#skyWelcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../resources/image/sky.png');
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+    background-color: #4ec0ca;
+    -webkit-animation: animSky 7s linear infinite;
+    animation: animSky 7s linear infinite;
+}
+
+#flyZone {
+    position: absolute;
+    bottom: 0;
+    height: 420px;
+    width: 100%;
+}
+
+#ceiling {
+    position: absolute;
+    top: -16px;
+    height: 16px;
+    width: 100%;
+    background-image: url('../resources/image/ceiling.png');
+    background-repeat: repeat-x;
+    -webkit-animation: animCeiling 481ms linear infinite;
+    animation: animCeiling 481ms linear infinite;
+}
+
+#land {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-image: url('../resources/image/ceiling.png');
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    background-color: #ded895;
+}
+
+#player {
+    left: 60px;
+    top: 200px;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20%;
+    z-index: 100;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    width: 20%;
+    height: 40%;
+    z-index: 100;
+}
+
+@-webkit-keyframes animSky {
+    0% {
+        background-position: 0px 100%;
+    }
+    100% {
+        background-position: -275px 100%;
+    }
+}
+
+@-moz-keyframes animSky {
+    0% {
+        background-position: 0px 100%;
+    }
+    100% {
+        background-position: -275px 100%;
+    }
+}
+
+@-o-keyframes animSky {
+    0% {
+        background-position: 0px 100%;
+    }
+    100% {
+        background-position: -275px 100%;
+    }
+}
+
+@keyframes animSky {
+    0% {
+        background-position: 0px 100%;
+    }
+    100% {
+        background-position: -275px 100%;
+    }
+}
+
+@-webkit-keyframes animBird {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 0px -96px;
+    }
+}
+
+@-moz-keyframes animBird {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 0px -96px;
+    }
+}
+
+@-o-keyframes animBird {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 0px -96px;
+    }
+}
+
+@keyframes animBird {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 0px -96px;
+    }
+}
+
+@-webkit-keyframes animPipe {
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: -100px;
+    }
+}
+
+@-moz-keyframes animPipe {
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: -100px;
+    }
+}
+
+@-o-keyframes animPipe {
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: -100px;
+    }
+}
+
+@keyframes animPipe {
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: -100px;
+    }
+}
