@@ -3,5 +3,7 @@ Flappy Bird Game using HTML , CSS , JavaScript ,JQquery.
 
 Link - https://naorfahima.github.io/Flappy-Bird-Game/
 
-![demo img](https://ibb.co/Bs61hqG)
-![demo img](https://ibb.co/zJ857wv)
+[menu](NaorFahima.github.com/Flappy-Bird-Game/img/menu.png)
+[game](NaorFahima.github.com/Flappy-Bird-Game/img/game.png)
+
+
